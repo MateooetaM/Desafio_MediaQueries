@@ -39,16 +39,17 @@ a {
 
 .main-menu {
     background: var(--nav);
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 0.1fr 5fr;
     align-items: center;
     padding: 1rem 2rem;
     grid-area: nav;
 }
 
-.main-menu .menu {
-    margin-right: 4rem;
+.main-menu .title {
+    text-align: center;
 }
+
 .main-menu i {
     color: var(--white)
 }
@@ -156,12 +157,6 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 2rem 1rem;
     }
-    .main-menu {
-        justify-content: center;
-    }
-    .main-menu .menu {
-        display: none;
-    }
 }
 
 @media (min-width: 786px) {
@@ -199,9 +194,17 @@ footer {
         width: 90%;
         background-color: var(--white);
     }
+
     .main-menu {
+        background: var(--nav);
+        display: flex;
+        justify-content: flex-start;
         justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        grid-area: nav;
     }
+
     .main-menu .menu {
         display: none;
     }
